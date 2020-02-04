@@ -23,7 +23,7 @@ const Navigation = () => {
           <li
             className="nav-list-item"
             onClick={() => {
-              document.cookie = "loggedIn=";
+              document.cookie = 'loggedIn='
               window.location.replace("/login");
             }}
           >

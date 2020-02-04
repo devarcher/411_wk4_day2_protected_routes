@@ -16,9 +16,7 @@ class App extends Component {
 
   login = e => {
     e.preventDefault();
-    // set cookie here
-    // set loggedIn = true and max-age = 60*1000 (one minute)
-
+    document.cookie = "loggedIn=true;max-age=60*1000"
     window.location.replace("/");
   };
 
@@ -26,7 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <Container maxWidth="sm">
-          <form className="login-form" onSubmit={this.login}>
+          <form className="login-form" onSubmit={this.login} noValidate>
             <TextField
               required
               onChange={this.handleTextChange}
